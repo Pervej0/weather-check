@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Temperature Hot</title>
+    <title>Weather check</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -31,18 +31,20 @@
             type="text"
             class="form-control"
             placeholder="Enter a location for Weather ..."
+            id="country-input"
           />
           <div class="input-group-append">
-            <button type="button" class="btn btn-danger">Search</button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              onclick="loadWeather()"
+            >
+              Search
+            </button>
           </div>
         </div>
       </form>
-      <div class="weather-status text-white text-center">
-        <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="" />
-        <h1>Dhaka</h1>
-        <h3><span>38.06</span>&deg;C</h3>
-        <h1 class="lead">Clouds</h1>
-      </div>
+      <div class="text-white text-center" id="weather-status"></div>
     </div>
 
     <!-- script.js -->
